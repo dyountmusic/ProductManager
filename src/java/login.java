@@ -83,22 +83,30 @@ public class login extends HttpServlet {
         return "Short description";
     }// </editor-fold>
 
-    String content = new String("<p>User <a href=\"index\">Logout</a></p>\n" +
-"\n" +
-"    <h1>Login</h1>\n" +
+    String content = new String("<h1>Sign-up form</h1>\n" +
 "    <div>\n" +
-"        <label>Username </label>\n" +
+"        <label><strong>First Name</strong></label>\n" +
 "        <input type=\"text\">\n" +
-"        <br>\n" +
-"        <br>\n" +
-"        <label>Password </label>\n" +
+"        <br><br>\n" +
+"        \n" +
+"        <label><strong>Last Name</strong></label>\n" +
 "        <input type=\"text\">\n" +
-"        <br>\n" +
-"        <br>\n" +
-"        <input type=\"submit\" value=\"Login\">\n" +
-"        <br>\n" +
-"        <br>\n" +
-"        <a href=\"signup\">New User? Click here to register</a>\n" +
+"        <br><br>\n" +
+"        \n" +
+"        <label><strong>Email</strong></label>\n" +
+"        <input type=\"text\">\n" +
+"        <br><br>\n" +
+"        \n" +
+"        <label><strong>Username</strong></label>\n" +
+"        <input type=\"text\">\n" +
+"        <br><br>\n" +
+"        \n" +
+"        <label><strong>Password</strong></label>\n" +
+"        <input type=\"text\">\n" +
+"        <br><br>\n" +
+"        \n" +
+"        <input type=\"submit\" value=\"Sign up\">\n" +
+"        \n" +
 "    </div>\n" +
 "    <br>");
 }
