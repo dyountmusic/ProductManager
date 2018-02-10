@@ -38,7 +38,7 @@ public class login extends HttpServlet {
             out.println("<title>Servlet login</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet login at " + request.getContextPath() + "</h1>");
+            out.println(content);
             out.println("</body>");
             out.println("</html>");
         }
@@ -83,4 +83,22 @@ public class login extends HttpServlet {
         return "Short description";
     }// </editor-fold>
 
+    String content = new String("<p>User <a href=\"index\">Login</a></p>\n" +
+"\n" +
+"    <h1>Login</h1>\n" +
+"    <div>\n" +
+"        <label>Username </label>\n" +
+"        <input type=\"text\">\n" +
+"        <br>\n" +
+"        <br>\n" +
+"        <label>Password </label>\n" +
+"        <input type=\"text\">\n" +
+"        <br>\n" +
+"        <br>\n" +
+"        <input type=\"submit\" value=\"Login\">\n" +
+"        <br>\n" +
+"        <br>\n" +
+"        <a href=\"signup\">New User? Click here to register</a>\n" +
+"    </div>\n" +
+"    <br>");
 }
