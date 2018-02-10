@@ -34,6 +34,7 @@ public class product extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
+            out.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"globalstyle.css\">");
             out.println("<title>Servlet product</title>");            
             out.println("</head>");
             out.println("<body>");
