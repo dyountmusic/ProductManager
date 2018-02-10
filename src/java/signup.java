@@ -38,7 +38,7 @@ public class signup extends HttpServlet {
             out.println("<title>Servlet signup</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet signup at " + request.getContextPath() + "</h1>");
+            out.println(content);
             out.println("</body>");
             out.println("</html>");
         }
@@ -83,4 +83,6 @@ public class signup extends HttpServlet {
         return "Short description";
     }// </editor-fold>
 
+    String content = new String("");
+    
 }
