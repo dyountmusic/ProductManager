@@ -35,10 +35,10 @@ public class products extends HttpServlet {
             out.println("<html>");
             out.println("<head>");
             out.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"globalstyle.css\">");
-            out.println("<title>Servlet products</title>");            
+            out.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"productstablestyle.css\">");
+            out.println("<title>Products</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet products at " + request.getContextPath() + "</h1>");
             out.println(content);
             out.println("</body>");
             out.println("</html>");
@@ -84,7 +84,10 @@ public class products extends HttpServlet {
         return "Short description";
     }// </editor-fold>
 
-    String content = new String("<div>\n" +
+    String content = new String("<p>User <a href=\"index\">Logout</a></p>\n" +
+"    \n" +
+"    <h1>Products</h1>\n" +
+"    <div>\n" +
 "        <table class=\"tg\">\n" +
 "            <tr>\n" +
 "                <th class=\"tg-e3zv\">Code</th>\n" +
@@ -122,6 +125,8 @@ public class products extends HttpServlet {
 "                <td class=\"tg-yw4l\">Delete</td>\n" +
 "            </tr>\n" +
 "        </table>\n" +
-"    </div>");
+"    </div>\n" +
+"    <br>\n" +
+"    <button>Add Product</button>");
     
 }
