@@ -34,10 +34,11 @@ public class signup extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
+            out.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"globalstyle.css\">");
             out.println("<title>Servlet signup</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet signup at " + request.getContextPath() + "</h1>");
+            out.println(content);
             out.println("</body>");
             out.println("</html>");
         }
@@ -82,4 +83,31 @@ public class signup extends HttpServlet {
         return "Short description";
     }// </editor-fold>
 
+    String content = new String("<h1>Sign-up form</h1>\n" +
+"    <div>\n" +
+"        <label><strong>First Name</strong></label>\n" +
+"        <input type=\"text\">\n" +
+"        <br><br>\n" +
+"        \n" +
+"        <label><strong>Last Name</strong></label>\n" +
+"        <input type=\"text\">\n" +
+"        <br><br>\n" +
+"        \n" +
+"        <label><strong>Email</strong></label>\n" +
+"        <input type=\"text\">\n" +
+"        <br><br>\n" +
+"        \n" +
+"        <label><strong>Username</strong></label>\n" +
+"        <input type=\"text\">\n" +
+"        <br><br>\n" +
+"        \n" +
+"        <label><strong>Password</strong></label>\n" +
+"        <input type=\"text\">\n" +
+"        <br><br>\n" +
+"        \n" +
+"        <input type=\"submit\" value=\"Sign up\">\n" +
+"        \n" +
+"    </div>\n" +
+"    <br>");
+    
 }

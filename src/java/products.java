@@ -34,10 +34,12 @@ public class products extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet products</title>");            
+            out.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"globalstyle.css\">");
+            out.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"productstablestyle.css\">");
+            out.println("<title>Products</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet products at " + request.getContextPath() + "</h1>");
+            out.println(content);
             out.println("</body>");
             out.println("</html>");
         }
@@ -82,4 +84,49 @@ public class products extends HttpServlet {
         return "Short description";
     }// </editor-fold>
 
+    String content = new String("<p>User <a href=\"index\">Logout</a></p>\n" +
+"    \n" +
+"    <h1>Products</h1>\n" +
+"    <div>\n" +
+"        <table class=\"tg\">\n" +
+"            <tr>\n" +
+"                <th class=\"tg-e3zv\">Code</th>\n" +
+"                <th class=\"tg-9hbo\">Description</th>\n" +
+"                <th class=\"tg-9hbo\">Price</th>\n" +
+"                <th class=\"tg-yw4l\"></th>\n" +
+"                <th class=\"tg-yw4l\"></th>\n" +
+"            </tr>\n" +
+"            <tr>\n" +
+"                <td class=\"tg-yw4l\">8601</td>\n" +
+"                <td class=\"tg-yw4l\">86 (the band) - True Life Songs and Pictures</td>\n" +
+"                <td class=\"tg-yw4l\">$15.96</td>\n" +
+"                <td class=\"tg-yw4l\">Edit</td>\n" +
+"                <td class=\"tg-yw4l\">Delete</td>\n" +
+"            </tr>\n" +
+"            <tr>\n" +
+"                <td class=\"tg-yw4l\">pf01</td>\n" +
+"                <td class=\"tg-yw4l\">Paddlefoot - The first CD</td>\n" +
+"                <td class=\"tg-yw4l\">$12.95</td>\n" +
+"                <td class=\"tg-yw4l\">Edit</td>\n" +
+"                <td class=\"tg-yw4l\">Delete</td>\n" +
+"            </tr>\n" +
+"            <tr>\n" +
+"                <td class=\"tg-yw4l\">pf02</td>\n" +
+"                <td class=\"tg-yw4l\">Paddlefood - The second CD</td>\n" +
+"                <td class=\"tg-yw4l\">$14.95</td>\n" +
+"                <td class=\"tg-yw4l\">Edit</td>\n" +
+"                <td class=\"tg-yw4l\">Delete</td>\n" +
+"            </tr>\n" +
+"            <tr>\n" +
+"                <td class=\"tg-yw4l\">jr01</td>\n" +
+"                <td class=\"tg-yw4l\">Joe Rut - Genuine Wood Grained Finish</td>\n" +
+"                <td class=\"tg-yw4l\">$14.95</td>\n" +
+"                <td class=\"tg-yw4l\">Edit</td>\n" +
+"                <td class=\"tg-yw4l\">Delete</td>\n" +
+"            </tr>\n" +
+"        </table>\n" +
+"    </div>\n" +
+"    <br>\n" +
+"    <button>Add Product</button>");
+    
 }

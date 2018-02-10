@@ -39,7 +39,7 @@ public class index extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             String content = "<h1>Product Management</h1>\n" +
-"        <p><a href=\"products.html\">View Products</a></p>";
+"        <p><a href=\"products\">View Products</a></p>";
             out.println(content);
             out.println("</body>");
             out.println("</html>");

@@ -34,10 +34,11 @@ public class confirmDelete extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
+            out.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"globalstyle.css\">");
             out.println("<title>Servlet confirmDelete</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet confirmDelete at " + request.getContextPath() + "</h1>");
+            out.println(content);
             out.println("</body>");
             out.println("</html>");
         }
@@ -81,5 +82,18 @@ public class confirmDelete extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
+    
+    String content = new String("<p>User <a href=\"index\">Logout</a></p>\n" +
+"    \n" +
+"    <h1>Are you sure you want to delete this product?</h1>\n" +
+"    <div>\n" +
+"        <p><strong>Code: </strong></p>\n" +
+"        <p><strong>Description: </strong></p>\n" +
+"        <p><strong>Price: </strong></p>\n" +
+"        <p></p>\n" +
+"    </div>\n" +
+"    <br>\n" +
+"    <button>Yes</button>\n" +
+"    <a href=\"products\"><button>No</button></a>");
 
 }

@@ -34,10 +34,11 @@ public class product extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
+            out.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"globalstyle.css\">");
             out.println("<title>Servlet product</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet product at " + request.getContextPath() + "</h1>");
+            out.println(content);
             out.println("</body>");
             out.println("</html>");
         }
@@ -82,4 +83,33 @@ public class product extends HttpServlet {
         return "Short description";
     }// </editor-fold>
 
+    String content = new String("<p>User <a href=\"index\">Logout</a></p>\n" +
+"    \n" +
+"    <h1>Product</h1>\n" +
+"    <div>\n" +
+"        \n" +
+"        <form>\n" +
+"            <label>Code:</label>\n" +
+"            <input type=\"text\" name=\"code\">\n" +
+"            \n" +
+"            <br>\n" +
+"            <br>\n" +
+"            \n" +
+"            <label>Description: </label>\n" +
+"            <textarea name=\"description\"></textarea>\n" +
+"            \n" +
+"            <br>\n" +
+"            <br>\n" +
+"            \n" +
+"            <label>Price: </label>\n" +
+"            <input type=\"text\" name=\"numbers\">\n" +
+"            \n" +
+"        </form>\n" +
+"        \n" +
+"    </div>\n" +
+"    <br>\n" +
+"    <button>Update Product</button>\n" +
+"    <a href=\"products\"><button>View Products</button></a>\n" +
+"    ");
+    
 }
