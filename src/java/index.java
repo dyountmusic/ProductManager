@@ -34,10 +34,10 @@ public class index extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
+            out.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"globalstyle.css\">");
             out.println("<title>Servlet index</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet index at " + request.getContextPath() + "</h1>");
             String content = "<h1>Product Management</h1>\n" +
 "        <p><a href=\"products.html\">View Products</a></p>";
             out.println(content);
