@@ -83,9 +83,7 @@ public class login extends HttpServlet {
         return "Short description";
     }// </editor-fold>
 
-    String content = new String("<p>User <a href=\"index\">Login</a></p>\n" +
-"\n" +
-"    <h1>Are you sure you want to delete this product?</h1>\n" +
+    String content = new String("<h1>Login</h1>\n" +
 "    <div>\n" +
 "        <label>Username </label>\n" +
 "        <input type=\"text\">\n" +

@@ -93,7 +93,7 @@ public class confirmDelete extends HttpServlet {
 "        <p></p>\n" +
 "    </div>\n" +
 "    <br>\n" +
-"    <button>Update Product</button>\n" +
-"    <a href=\"products\"><button>View Products</button></a>");
+"    <button>Yes</button>\n" +
+"    <a href=\"products\"><button>No</button></a>");
 
 }
