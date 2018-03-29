@@ -36,7 +36,7 @@
     </div>
     <br>
     <button>Update Product</button>
-    <a href="products"><button>View Products</button></a>
+    <a href="products.jsp"><button>View Products</button></a>
 </body>
 
 </html>

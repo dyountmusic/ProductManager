@@ -62,7 +62,7 @@
         </table>
     </div>
     <br>
-    <button>Add Product</button>
+    <a href="product.jsp"><button>Add Product</button></a>
     
 </body>
 
