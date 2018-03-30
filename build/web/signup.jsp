@@ -21,28 +21,29 @@
 
     <h1>Sign-up form</h1>
     <div>
-        <label><strong>First Name</strong></label>
-        <input type="text">
-        <br><br>
-        
-        <label><strong>Last Name</strong></label>
-        <input type="text">
-        <br><br>
-        
-        <label><strong>Email</strong></label>
-        <input type="text">
-        <br><br>
-        
-        <label><strong>Username</strong></label>
-        <input type="text">
-        <br><br>
-        
-        <label><strong>Password</strong></label>
-        <input type="text">
-        <br><br>
-        
-        <input type="submit" value="Sign up">
-        
+        <form method="POST" action="membership/signup">
+            <label><strong>First Name</strong></label>
+            <input type="text" name="firstName">
+            <br><br>
+
+            <label><strong>Last Name</strong></label>
+            <input type="text" name="lastName">
+            <br><br>
+
+            <label><strong>Email</strong></label>
+            <input type="text" name="email">
+            <br><br>
+
+            <label><strong>Username</strong></label>
+            <input type="text" name="userName">
+            <br><br>
+
+            <label><strong>Password</strong></label>
+            <input type="text" name="password">
+            <br><br>
+
+            <input type="submit" value="Sign up">
+        </form>
     </div>
     <br>
     

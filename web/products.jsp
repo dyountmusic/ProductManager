@@ -35,34 +35,34 @@
                 <td class="tg-yw4l">8601</td>
                 <td class="tg-yw4l">86 (the band) - True Life Songs and Pictures</td>
                 <td class="tg-yw4l">$15.96</td>
-                <td class="tg-yw4l">Edit</td>
-                <td class="tg-yw4l">Delete</td>
+                <td class="tg-yw4l"><a href="productManagement?action=displayProduct">Edit</a></td>
+                <td class="tg-yw4l"><a href="productManagement?action=deleteProduct">Delete</a></td>
             </tr>
             <tr>
                 <td class="tg-yw4l">pf01</td>
                 <td class="tg-yw4l">Paddlefoot - The first CD</td>
                 <td class="tg-yw4l">$12.95</td>
-                <td class="tg-yw4l">Edit</td>
-                <td class="tg-yw4l">Delete</td>
+                <td class="tg-yw4l"><a href="productManagement?action=displayProduct">Edit</a></td>
+                <td class="tg-yw4l"><a href="productManagement?action=deleteProduct">Delete</a></td>
             </tr>
             <tr>
                 <td class="tg-yw4l">pf02</td>
                 <td class="tg-yw4l">Paddlefood - The second CD</td>
                 <td class="tg-yw4l">$14.95</td>
-                <td class="tg-yw4l">Edit</td>
-                <td class="tg-yw4l">Delete</td>
+                <td class="tg-yw4l"><a href="productManagement?action=displayProduct">Edit</a></td>
+                <td class="tg-yw4l"><a href="productManagement?action=deleteProduct">Delete</a></td>
             </tr>
             <tr>
                 <td class="tg-yw4l">jr01</td>
                 <td class="tg-yw4l">Joe Rut - Genuine Wood Grained Finish</td>
                 <td class="tg-yw4l">$14.95</td>
-                <td class="tg-yw4l">Edit</td>
-                <td class="tg-yw4l">Delete</td>
+                <td class="tg-yw4l"><a href="productManagement?action=displayProduct">Edit</a></td>
+                <td class="tg-yw4l"><a href="productManagement?action=deleteProduct">Delete</a></td>
             </tr>
         </table>
     </div>
     <br>
-    <a href="product.jsp"><button>Add Product</button></a>
+    <a href="productManagement?action=addProduct"><button>Add Product</button></a>
     
 </body>
 

@@ -35,8 +35,8 @@
         </form>
     </div>
     <br>
-    <button>Update Product</button>
-    <a href="products.jsp"><button>View Products</button></a>
+    <a href="productManagement?action=displayProducts"><button>Update Product</button></a>
+    <a href="productManagement?action=displayProducts"><button>View Products</button></a>
 </body>
 
 </html>

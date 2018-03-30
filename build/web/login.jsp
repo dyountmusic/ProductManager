@@ -32,7 +32,7 @@
         <input type="submit" value="Login">
         <br>
         <br>
-        <a href="signup.jsp">New User? Click here to register</a>
+        <a href="membership?action=signup">New User? Click here to register</a>
     </div>
     <br>
 
