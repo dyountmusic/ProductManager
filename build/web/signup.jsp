@@ -1,52 +1,32 @@
 <%-- 
     Document   : signup
-    Created on : Feb 11, 2018, 2:47:49 PM
-    Author     : danielyount
+    Created on : Feb 16, 2017, 9:55:14 AM
+    Author     : Kassandra Walker & David McAlister
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-
-<head>
-
-    <link rel="stylesheet" type="text/css" href="globalstyle.css">
-
-    <title>Signup</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-
-<body>
-
-    <h1>Sign-up form</h1>
-    <div>
-        <form method="POST" action="membership/signup">
-            <label><strong>First Name</strong></label>
-            <input type="text" name="firstName">
-            <br><br>
-
-            <label><strong>Last Name</strong></label>
-            <input type="text" name="lastName">
-            <br><br>
-
-            <label><strong>Email</strong></label>
-            <input type="text" name="email">
-            <br><br>
-
-            <label><strong>Username</strong></label>
-            <input type="text" name="userName">
-            <br><br>
-
-            <label><strong>Password</strong></label>
-            <input type="text" name="password">
-            <br><br>
-
-            <input type="submit" value="Sign up">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="stylesheet.css" type="text/css" />       
+        <title> Product Management </title>
+    </head>
+    <body>
+       <h2>Sign-up Form</h2>
+        <form action="membership?action=signup-attempt" name="registration" method="post">  
+            <label for="firstName">First Name:</label>  
+            <input type="text" name="firstName"/>  <br>
+            <label for="lastName">Last Name:</label>  
+            <input type="text" name="lastName"  /> <br>
+            <label for="email">Email:</label>  
+            <input type="text" name="email"  />  <br>
+            <!--<label for="userName">User Name:</label>  
+            <input type="text" name="userName"/>  <br> -->
+            <label for="password">Password:</label>  
+            <input type="password" name="password"/>  <br>
+            <input type="submit" name="submit" value="Sign Up" />
         </form>
-    </div>
-    <br>
-    
-</body>
-
+    </body>
 </html>

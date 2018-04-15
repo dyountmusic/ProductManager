@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package murach.data;
+package edu.uncc.nbad;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -14,12 +14,7 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
-import murach.business.Product;
 
-/**
- *
- * @author lsafarne
- */
 public class ProductIO {
 
     private static List<Product> products = null;

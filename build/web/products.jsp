@@ -1,69 +1,41 @@
 <%-- 
     Document   : products
-    Created on : Feb 11, 2018, 2:31:48 PM
-    Author     : danielyount
+    Created on : Feb 16, 2017, 9:53:43 AM
+    Author     : Kassandra Walker & David McAlister
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<html>
-
-<head>
-
-    <link rel="stylesheet" type="text/css" href="globalstyle.css">
-    <link rel="stylesheet" type="text/css" href="productstablestyle.css">
-    
-    <title>Products</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-
-<body>
-
-    <p>User <a href="index.jsp">Logout</a></p>
-    
-    <h1>Products</h1>
-    <div>
-        <table class="tg">
-            <tr>
-                <th class="tg-e3zv">Code</th>
-                <th class="tg-9hbo">Description</th>
-                <th class="tg-9hbo">Price</th>
-                <th class="tg-yw4l"></th>
-                <th class="tg-yw4l"></th>
+<%@ include file="header.jsp" %>
+    </head>
+    <body>
+        <p> Welcome back, <c:out value='${user.firstName}'/>. <br/>
+            <a href="membership?action=logout">Logout</a> </p>
+        
+        <h2>Products</h2>
+        <table>
+            <tr><th> Code </th> <th> Description </th> <th> Price </th> 
+                <th></th> <th></th> </tr>
+            <!-- The For Each that Loops Through the Products -->
+            <c:forEach var="Product" items="${products}">
+             <tr>
+                <td>${Product.code}</td>
+                <td>${Product.description}</td> 
+                <td>$ ${Product.price}</td>
+                <td> 
+                    <form action="productManagement?action=displayProduct" method="post">
+                        <input type="hidden" name="productCode" value="<c:out value='${Product.code}'/>"/>
+                        <input type="submit" value="Edit" />
+                    </form>
+                </td> 
+                <td> 
+                    <form action="productManagement?action=deleteProduct" method="post">
+                        <input type="hidden" name="productCode" value="<c:out value='${Product.code}'/>"/>
+                        <input type="submit" value="Delete" />
+                    </form>
+                </td> 
             </tr>
-            <tr>
-                <td class="tg-yw4l">8601</td>
-                <td class="tg-yw4l">86 (the band) - True Life Songs and Pictures</td>
-                <td class="tg-yw4l">$15.96</td>
-                <td class="tg-yw4l"><a href="productManagement?action=displayProduct">Edit</a></td>
-                <td class="tg-yw4l"><a href="productManagement?action=deleteProduct">Delete</a></td>
-            </tr>
-            <tr>
-                <td class="tg-yw4l">pf01</td>
-                <td class="tg-yw4l">Paddlefoot - The first CD</td>
-                <td class="tg-yw4l">$12.95</td>
-                <td class="tg-yw4l"><a href="productManagement?action=displayProduct">Edit</a></td>
-                <td class="tg-yw4l"><a href="productManagement?action=deleteProduct">Delete</a></td>
-            </tr>
-            <tr>
-                <td class="tg-yw4l">pf02</td>
-                <td class="tg-yw4l">Paddlefood - The second CD</td>
-                <td class="tg-yw4l">$14.95</td>
-                <td class="tg-yw4l"><a href="productManagement?action=displayProduct">Edit</a></td>
-                <td class="tg-yw4l"><a href="productManagement?action=deleteProduct">Delete</a></td>
-            </tr>
-            <tr>
-                <td class="tg-yw4l">jr01</td>
-                <td class="tg-yw4l">Joe Rut - Genuine Wood Grained Finish</td>
-                <td class="tg-yw4l">$14.95</td>
-                <td class="tg-yw4l"><a href="productManagement?action=displayProduct">Edit</a></td>
-                <td class="tg-yw4l"><a href="productManagement?action=deleteProduct">Delete</a></td>
-            </tr>
+             </c:forEach>
         </table>
-    </div>
-    <br>
-    <a href="productManagement?action=addProduct"><button>Add Product</button></a>
-    
-</body>
-
+        
+        <a href="/FinalProject/product.jsp"> <button> Add Product </button> </a>
+    </body>
 </html>

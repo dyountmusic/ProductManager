@@ -1,28 +1,28 @@
 <%-- 
     Document   : confirmDelete
-    Created on : Feb 11, 2018, 2:33:11 PM
-    Author     : danielyount
+    Created on : Feb 16, 2017, 9:54:07 AM
+    Author     : Kassandra Walker & David McAlister
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="globalstyle.css">
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Confirm Delete</title>
+<%@ include file="header.jsp" %>
     </head>
     <body>
-        <p>User <a href="index.jsp">Logout</a></p>
-        <h1>Are you sure you want to delete this product?</h1>
-        <div>
-            <p><strong>Code: </strong></p>
-            <p><strong>Description: </strong></p>
-            <p><strong>Price: </strong></p>
-            <p></p>
-        </div>
-        <br>
-        <button>Yes</button>
-        <a href="products"><button>No</button></a>
+        <p> Welcome back, <c:out value='${user.firstName}'/>.
+            <a href="membership?action=logout">Logout</a> </p>
+        
+        <h2>Are you sure you want to delete this product?</h2>
+        <form action="productManagement?action=displayProducts" method="POST">
+            <label> Code: </label>
+            <p> <c:out value='${product.code}' /> <br />
+            <label> Description: </label>
+            <p> <c:out value='${product.description}' /> </p> <br />
+            <label> Price: </label>
+            <p> <c:out value='${product.price}' /> </p> <br />
+            
+            <input type="hidden" name="delete" value="Yes" />
+            <input type="hidden" name="code" value="<c:out value='${product.code}'/>"/>
+            <input type="submit" value="Yes" /> 
+        </form>
+            <a href="productManagement?action=displayProducts"> <button class="left"> No </button></a>
     </body>
 </html>

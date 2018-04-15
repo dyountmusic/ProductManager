@@ -1,8 +1,7 @@
-package murach.data;
+package edu.uncc.nbad;
 
 import java.io.*;
 import java.util.*;
-import murach.business.User;
 
 public class UserIO {
 
@@ -21,7 +20,7 @@ public class UserIO {
         
         User user = null;
         File file = new File(filename);
-        
+   
         if(file.exists())
         {
             BufferedReader in = new BufferedReader(
@@ -31,6 +30,8 @@ public class UserIO {
 
             String line = in.readLine();
             while (line != null) {
+                boolean catc=false;
+                try{
                 StringTokenizer t = new StringTokenizer(line, "|");
                 String email = t.nextToken();
                 if (email.equalsIgnoreCase(emailAddress)) {
@@ -42,10 +43,18 @@ public class UserIO {
                     user.setLastName(lastName);
                     user.setPassword(password);
                 }
-                line = in.readLine();
+                    } catch (NoSuchElementException e) {
+                    line = in.readLine();
+                    catc=true;
+                }
+                if(!catc)
+                {
+                     line = in.readLine();
+                }
             }
             in.close();
         }
+ 
         return user;
     }
 
@@ -58,8 +67,10 @@ public class UserIO {
                     new FileReader(file));
             String line = in.readLine();
             while (line != null) {
+             boolean catc=false;
                 try {
                     StringTokenizer t = new StringTokenizer(line, "|");
+                     if (t.countTokens() >= 3) {
                     String emailAddress = t.nextToken();
                     String firstName = t.nextToken();
                     String lastName = t.nextToken();
@@ -67,12 +78,20 @@ public class UserIO {
                     User user = new User(firstName, lastName, emailAddress, password);
                     users.add(user);
                     line = in.readLine();
+                     }
                 } catch (NoSuchElementException e) {
                     line = in.readLine();
+                    catc=true;
                 }
+                if(!catc)
+                {
+                     line = in.readLine();
+                }
+           
             }
             in.close();
         }
+        
         return users;
     }
 
@@ -102,4 +121,11 @@ public class UserIO {
         }
         return users;
     }
+    
+    
+    public static boolean exists(String username,String filename) throws IOException {
+        if (getUser(username, filename).getEmail() == username)
+          return true;
+        return false;
+    }    
 }

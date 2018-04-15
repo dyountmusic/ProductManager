@@ -1,20 +1,23 @@
 <%-- 
     Document   : index
-    Created on : Feb 11, 2018, 2:46:40 PM
-    Author     : danielyount
+    Created on : Feb 16, 2017, 9:53:30 AM
+    Author     : Kassandra Walker & David McAlister
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<c:if test="${user == null}">
+    <c:redirect url="/login.jsp"></c:redirect>
+</c:if>
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="globalstyle.css">
-        <title>Product Manager</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="stylesheet.css" type="text/css" />       
+        <title> Product Management </title>
     </head>
     <body>
-        <h1>Product Management</h1>
-        <p><a href="products.jsp">View Products</a></p>
+        <h2>Product Management</h2>
+        <a href="productManagement?action=displayProducts"> View Products </a>
     </body>
 </html>

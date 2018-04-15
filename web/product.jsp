@@ -1,43 +1,29 @@
 <%-- 
     Document   : product
-    Created on : Feb 11, 2018, 2:43:23 PM
-    Author     : danielyount
+    Created on : Feb 16, 2017, 9:53:43 AM
+    Author     : Kassandra Walker & David McAlister
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-
-<head>
-
-    <link rel="stylesheet" type="text/css" href="globalstyle.css">
-
-    <title>TODO supply a title</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-
-<body>
-
-    <p>User <a href="index.jsp">Logout</a></p>
-    <h1>Product</h1>
-    <div>
-        <form>
-            <label>Code:</label>
-            <input type="text" name="code">
-            <br>
-            <br><label>Description: </label>
-            <textarea name="description"></textarea>
-            <br>
-            <br>
-            <label>Price: </label>
-            <input type="text" name="numbers">
+<%@ include file="header.jsp" %>
+    </head>
+    <body>
+        <p> Welcome back, <c:out value='${user.firstName}'/>. <br/>
+            <a href="membership?action=logout">Logout</a> </p>
+        
+        <h2>Product</h2>
+        <c:out value="${error}" />
+        <form action="productManagement?action=displayProducts" method="POST">
+            <label> Code: </label>
+            <input type="text" name="code" value="${product.code}"/> <br />
+            <label> Description: </label>
+            <textarea name="description" height="50px;">${product.description}</textarea> <br />
+            <label> Price: </label>
+            <input type="text" name="price" value="${product.price}"/> <br />
+            
+            <input type="hidden" name="update" value="yes"/>
+            <input type="submit" value="Add or Update Product" />
         </form>
-    </div>
-    <br>
-    <a href="productManagement?action=displayProducts"><button>Update Product</button></a>
-    <a href="productManagement?action=displayProducts"><button>View Products</button></a>
-</body>
-
+            <br />
+            <a href="productManagement?action=displayProducts"> <button class="left"> View All Products </button></a>
+    </body>
 </html>
-
