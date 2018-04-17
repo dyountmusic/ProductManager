@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import murach.data.UserTable;
 
 
 public class MembershipServlet extends HttpServlet {
@@ -109,8 +110,8 @@ public class MembershipServlet extends HttpServlet {
                     url="/login.jsp";
                     request.setAttribute("error", "You cannot leave fields blank!");
                 } else {
-                    if (UserIO.exists(email, path)){  
-                        User user = UserIO.getUser(email, path);
+                    if (UserTable.getUser(email) != null) {
+                        User user = UserTable.getUser(email);
 
                         if (password.equals(user.getPassword())) {
                             session.setAttribute("user", user);
@@ -142,8 +143,7 @@ public class MembershipServlet extends HttpServlet {
                         // IF VALIDATED
                         url = "/login.jsp";
                         User u = new User(firstName, lastName, email, password);
-                        UserIO.addRecord(u, path);
-
+                        UserTable.addRecord(u);
                         request.setAttribute("error", "Registration Successful");
                         // END IF VALIDATED
                     } else if (!email.contains("@")) {
