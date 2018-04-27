@@ -1,8 +1,3 @@
-<%-- 
-    Document   : confirmDelete
-    Created on : Feb 16, 2017, 9:54:07 AM
-    Author     : Kassandra Walker & David McAlister
---%>
 
 <%@ include file="header.jsp" %>
     </head>

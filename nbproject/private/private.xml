@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/Users/danielyount/NetBeansProjects/ProductManager/src/java/murach/data/ProductTable.java</file>
+            <file>file:/Users/danielyount/NetBeansProjects/ProductManager/src/java/edu/uncc/nbad/MembershipServlet.java</file>
+            <file>file:/Users/danielyount/NetBeansProjects/ProductManager/src/java/edu/uncc/nbad/ProductManagementServlet.java</file>
+            <file>file:/Users/danielyount/NetBeansProjects/ProductManager/src/java/murach/data/UserTable.java</file>
+            <file>file:/Users/danielyount/NetBeansProjects/ProductManager/src/java/edu/uncc/nbad/User.java</file>
+            <file>file:/Users/danielyount/NetBeansProjects/ProductManager/src/java/edu/uncc/nbad/Product.java</file>
+            <file>file:/Users/danielyount/NetBeansProjects/ProductManager/web/signup.jsp</file>
+            <file>file:/Users/danielyount/NetBeansProjects/ProductManager/web/product.jsp</file>
+        </group>
     </open-files>
 </project-private>
