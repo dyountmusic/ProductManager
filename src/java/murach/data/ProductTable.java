@@ -96,24 +96,43 @@ public class ProductTable {
     }
 
     public static void insertProduct(Product product) {
+        
+        if (product.getCode().contains("<script>")) {
+            return;
+        }
+        
+        if (product.getDescription().contains("<script>")) {
+            return;
+        }
+        
         try {
             String queryString = "INSERT INTO products(code, description, price) VALUES ('" + product.getCode() + "', '" + product.getDescription() + "', '" + product.getPrice() + "')";
-            Statement statement = connection.createStatement();
+            Statement statement = connection.prepareStatement(queryString);
             
-            statement.executeUpdate(queryString);
+            statement.execute(queryString);
         } catch (SQLException e) {
             System.out.println(e);
         }
     }
 
     public static void updateProduct(Product product) {
+        
+        if (product.getCode().contains("<script>")) {
+            return;
+        }
+        
+        if (product.getDescription().contains("<script>")) {
+            return;
+        }
+        
+        
         try {
             String queryString = "UPDATE products SET "
                     + "code= '" + product.getCode() + "', "
                     + "description= '" + product.getDescription() + "', "
                     + "price= '" + product.getPrice() + "' "
                     + "WHERE code= '" + product.getCode() + "'";
-            Statement statement = connection.createStatement();
+            Statement statement = connection.prepareStatement(queryString);
             statement.executeUpdate(queryString);
         } catch (SQLException e) {
             System.out.println(e);

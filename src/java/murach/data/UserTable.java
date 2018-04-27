@@ -29,6 +29,22 @@ public class UserTable {
     }
     
     public static void addRecord(User user) throws IOException {
+        if (user.getFirstName().contains("<script>")) {
+            return;
+        }
+        
+        if (user.getLastName().contains("<script>")) {
+            return;
+        }
+        
+        if (user.getEmail().contains("<script>")) {
+            return;
+        }
+        
+        if (user.getPassword().contains("<script>")) {
+            return;
+        }
+        
         String query = "INSERT INTO users(firstName, lastName, email, password) VALUES ('"+ user.getFirstName()+ "', '" + user.getLastName()+ "', '"  + user.getEmail() + "', '"  + user.getPassword() + "')";
 
         try {
